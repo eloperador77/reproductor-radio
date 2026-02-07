@@ -91,6 +91,13 @@
       margin: 10px 0;
     }
 
+    .bar {
+      width: 4px;
+      background: #ff6600;
+      animation: equalize 1s infinite;
+      animation-play-state: paused;
+    }
+
     .playing .bar {
       animation-play-state: running;
     }
@@ -100,6 +107,10 @@
     .bar:nth-child(3) { animation-delay: 0.4s; }
     .bar:nth-child(4) { animation-delay: 0.6s; }
     .bar:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes equalize {
+      0%, 100% { height: 5px; }
+      50% { height: 20px; }
     }
 
     .controls button {
@@ -141,6 +152,14 @@
          class="logo">
 
     <h2>Radio Fenix</h2>
+
+    <div class="equalizer">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
 
     <audio id="radioPlayer" controls>
       <source src="https://streaming01.shockmedia.com.ar/9628/;" type="audio/mpeg">
@@ -210,4 +229,3 @@
 
 </body>
 </html>
-
